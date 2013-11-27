@@ -11,5 +11,9 @@ Vagrant.configure("2") do |config|
       ansible.playbook = 'provisioning/teamcity_server.yml'
       ansible.verbose = 'v'
     end
+     config.vm.provider "virtualbox" do |vb|
+       vb.customize ["modifyvm", :id, "--memory", "1024"]
+    end
   end
+
 end
