@@ -41,6 +41,3 @@
 
     - name: start teamcity now
       service: name=teamcity state=started
-
-    - name: install git
-      apt: pkg=git-core
